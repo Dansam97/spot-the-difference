@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Vistas — Spot the Difference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Twin Vistas</div>
+  <div class="stat"><span class="label">Level</span><span id="hudLevel">1 · Lantern Bay</span></div>
+  <div class="stat counter"><span id="hudFound">0 of 5 found</span><span id="hudRemain" class="remain">5 to go</span></div>
+  <div class="stat"><span class="label">Score</span><span id="hudScore">0</span></div>
+  <div class="stat"><span class="label">Hints</span><span id="hudHints">2</span></div>
+  <button id="btnHint" type="button" title="Keyboard: H">Hint</button>
+  <button id="btnRestart" type="button" title="Keyboard: R">Restart</button>
+</header>
+<div class="timerwrap"><div id="timerBar"></div><span id="hudTime">2:30</span></div>
+<main class="stage">
+  <figure class="panel">
+    <canvas id="panelLeft" width="520" height="390"></canvas>
+    <figcaption>Original</figcaption>
+  </figure>
+  <figure class="panel">
+    <canvas id="panelRight" width="520" height="390"></canvas>
+    <figcaption>Changed</figcaption>
+  </figure>
+</main>
+<p id="toast" class="toast">Find every difference between the two pictures.</p>
+<p class="tip">Click a difference in either picture. A wrong click costs 5 seconds. Keys: H hint, R restart.</p>
+
+<div id="overlay" class="overlay">
+  <div class="card">
+    <h1 id="ovTitle">Twin Vistas</h1>
+    <p id="ovText">Two pictures, a handful of quiet changes. Click each difference you spot, in either picture, before the light runs out.</p>
+    <button id="ovButton" type="button">Start</button>
+  </div>
+</div>
+<div id="testResult" hidden></div>
+
+<script src="js/audio.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
